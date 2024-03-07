@@ -1,0 +1,87 @@
+.item-1{
+  border:1px solid black;
+  flex:20%;
+  float: left;
+  margin: 2px;
+  }
+  .item-2{
+    border:1px solid blue;
+    flex:60%;
+    float: left;
+    margin: 2px;
+    }
+    .item-3{
+      border:1px solid red;
+      flex:20%;
+      float: left;
+      margin: 2px;
+      }
+      .parent{
+        /* float is use for take the limit space in the give element  */
+        
+        display:flex;
+        padding: 8px;
+        color: blue;
+        font-size: 50px;
+      }
+      @media(max-width:600px){
+        .item-1{
+          display: none;
+        }
+        .item-2{
+          flex:100%;
+        }
+  .item-3{
+    display: none;
+  }
+      }
+      @media(min-width:601px) and (max-width:942px){
+.item-1{
+  flex:20%
+}
+.item-2{
+  flex:80%
+}
+.item-3{
+  display:none;
+}
+      
+      }
+      @media print and (max-width:11110){
+        .parent {
+          color: brown;
+        }
+      }
+
+      .item-a{
+        border: 1px solid black;
+        grid-area: first;
+      }
+      .item-b{
+        border: 1px solid rgb(226, 56, 56);
+        grid-area: second;
+      }
+      .item-c{
+        border: 1px solid rgb(172, 59, 187);
+        grid-area: third ;
+      }
+      .item-d{
+        border: 1px solid rgb(79, 12, 12);
+        grid-area: fourth;
+      }
+      .item-e{
+        border: 1px solid rgb(106, 139, 21);
+        grid-area: fifth;
+      }
+      .item-f{
+        border: 1px solid rgb(19, 139, 69);
+        grid-area: sixth;
+      }
+      
+      .parent-grid{
+        display: grid;
+        font-size: 50px;
+        grid:auto/auto auto auto ;
+        grid-gap:10px;
+        grid-template-areas:' first first  first first first  '  'second  third  fourth fifth sixth';
+      }
